@@ -1,0 +1,120 @@
+{
+  "id": "local_tax",
+  "name": "지방세 납부",
+  "category": "세금/납부",
+  "keywords": ["지방세", "세금납부", "세금", "주민세", "자동차세", "취득세", "등록면허세", "세금고지서", "지방세납부", "재산세", "납부", "고지서"],
+  "conditions": [
+    {
+      "question": "어떤 세금에 대한 문의인가요?",
+      "param": "tax_type",
+      "options": [
+        {"label": "재산세", "value": "property"},
+        {"label": "자동차세", "value": "vehicle"},
+        {"label": "취득세 (부동산 등)", "value": "acquisition"},
+        {"label": "납부 방법 안내", "value": "how_to_pay"}
+      ]
+    }
+  ],
+  "responses": {
+    "property": {
+      "conclusion": "재산세 납부 안내입니다.",
+      "documents": [
+        "고지서 (매년 7월·9월 발송)",
+        "납세번호 (고지서 또는 위택스에서 확인)"
+      ],
+      "methods": {
+        "online": {
+          "name": "위택스 (Wetax)",
+          "url": "https://www.wetax.go.kr"
+        },
+        "offline": {
+          "name": "은행 방문 납부",
+          "address": "전국 은행 또는 성북구청 세무과"
+        }
+      },
+      "links": [
+        {"title": "위택스", "url": "https://www.wetax.go.kr"},
+        {"title": "성북구 세무과", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "세무1과 (재산세팀)",
+        "phone": "02-2241-4171"
+      }
+    },
+    "vehicle": {
+      "conclusion": "자동차세 납부 안내입니다.",
+      "documents": [
+        "고지서 (매년 6월·12월 발송)",
+        "차량번호 또는 납세번호"
+      ],
+      "methods": {
+        "online": {
+          "name": "위택스 (Wetax)",
+          "url": "https://www.wetax.go.kr"
+        },
+        "offline": {
+          "name": "은행 방문 납부",
+          "address": "전국 은행 또는 성북구청 세무과"
+        }
+      },
+      "links": [
+        {"title": "위택스", "url": "https://www.wetax.go.kr"},
+        {"title": "성북구 세무과", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "세무2과 (자동차세팀)",
+        "phone": "02-2241-4181"
+      }
+    },
+    "acquisition": {
+      "conclusion": "취득세 신고·납부 안내입니다.",
+      "documents": [
+        "매매계약서 또는 등기원인 서류",
+        "신분증",
+        "취득물건 관련 서류"
+      ],
+      "methods": {
+        "online": {
+          "name": "위택스 (Wetax)",
+          "url": "https://www.wetax.go.kr"
+        },
+        "offline": {
+          "name": "방문 신고",
+          "address": "성북구청 세무과 (2층)"
+        }
+      },
+      "links": [
+        {"title": "위택스", "url": "https://www.wetax.go.kr"},
+        {"title": "성북구 세무과", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "세무1과 (취득세팀)",
+        "phone": "02-2241-4161"
+      }
+    },
+    "how_to_pay": {
+      "conclusion": "지방세 납부 방법 안내입니다.",
+      "documents": [
+        "고지서 또는 납세번호"
+      ],
+      "methods": {
+        "online": {
+          "name": "위택스 / 인터넷지로 / 카드납부",
+          "url": "https://www.wetax.go.kr"
+        },
+        "offline": {
+          "name": "은행 CD/ATM, 편의점, 구청 방문",
+          "address": "전국 은행 또는 성북구청 세무과"
+        }
+      },
+      "links": [
+        {"title": "위택스", "url": "https://www.wetax.go.kr"},
+        {"title": "인터넷지로", "url": "https://www.giro.or.kr"}
+      ],
+      "department": {
+        "name": "세무1과",
+        "phone": "02-2241-4171"
+      }
+    }
+  }
+}

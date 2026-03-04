@@ -1,0 +1,126 @@
+{
+  "id": "basic_livelihood",
+  "name": "기초생활수급 신청",
+  "category": "복지/지원",
+  "keywords": ["기초생활", "수급자", "기초수급", "생활보호", "국민기초", "기초생활수급", "생계급여", "의료급여", "주거급여"],
+  "conditions": [
+    {
+      "question": "어떤 급여를 신청하시려고 하나요?",
+      "param": "benefit_type",
+      "options": [
+        {"label": "생계급여", "value": "living"},
+        {"label": "의료급여", "value": "medical"},
+        {"label": "주거급여", "value": "housing"},
+        {"label": "잘 모르겠어요 (전체 안내)", "value": "general"}
+      ]
+    }
+  ],
+  "responses": {
+    "living": {
+      "conclusion": "생계급여 신청 안내입니다.",
+      "documents": [
+        "신분증",
+        "소득·재산 확인 서류",
+        "가족관계증명서",
+        "임대차계약서 (해당 시)",
+        "통장 사본"
+      ],
+      "methods": {
+        "online": {
+          "name": "복지로",
+          "url": "https://www.bokjiro.go.kr"
+        },
+        "offline": {
+          "name": "관할 주민센터 방문",
+          "address": "거주지 관할 주민센터 복지담당"
+        }
+      },
+      "links": [
+        {"title": "복지로", "url": "https://www.bokjiro.go.kr"},
+        {"title": "성북구 복지정책과", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "복지정책과",
+        "phone": "02-2241-3881"
+      }
+    },
+    "medical": {
+      "conclusion": "의료급여 신청 안내입니다.",
+      "documents": [
+        "신분증",
+        "소득·재산 확인 서류",
+        "가족관계증명서",
+        "진단서 또는 의료비 관련 서류 (해당 시)"
+      ],
+      "methods": {
+        "offline": {
+          "name": "관할 주민센터 방문",
+          "address": "거주지 관할 주민센터 복지담당"
+        }
+      },
+      "links": [
+        {"title": "복지로", "url": "https://www.bokjiro.go.kr"},
+        {"title": "성북구 복지정책과", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "복지정책과",
+        "phone": "02-2241-3881"
+      }
+    },
+    "housing": {
+      "conclusion": "주거급여 신청 안내입니다.",
+      "documents": [
+        "신분증",
+        "소득·재산 확인 서류",
+        "임대차계약서",
+        "통장 사본"
+      ],
+      "methods": {
+        "online": {
+          "name": "복지로",
+          "url": "https://www.bokjiro.go.kr"
+        },
+        "offline": {
+          "name": "관할 주민센터 방문",
+          "address": "거주지 관할 주민센터 복지담당"
+        }
+      },
+      "links": [
+        {"title": "복지로", "url": "https://www.bokjiro.go.kr"},
+        {"title": "마이홈 (주거급여)", "url": "https://www.myhome.go.kr"}
+      ],
+      "department": {
+        "name": "복지정책과",
+        "phone": "02-2241-3881"
+      }
+    },
+    "general": {
+      "conclusion": "기초생활보장제도 전체 안내입니다.",
+      "documents": [
+        "신분증",
+        "소득·재산 확인 서류",
+        "가족관계증명서",
+        "임대차계약서 (해당 시)",
+        "통장 사본"
+      ],
+      "methods": {
+        "online": {
+          "name": "복지로",
+          "url": "https://www.bokjiro.go.kr"
+        },
+        "offline": {
+          "name": "관할 주민센터 방문 상담",
+          "address": "거주지 관할 주민센터 복지담당"
+        }
+      },
+      "links": [
+        {"title": "복지로", "url": "https://www.bokjiro.go.kr"},
+        {"title": "성북구 복지정책과", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "복지정책과",
+        "phone": "02-2241-3881"
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "child_allowance",
+  "name": "아동수당 신청",
+  "category": "복지/지원",
+  "keywords": ["아동수당", "아동수당신청", "아이수당", "양육수당", "육아수당", "아동급여", "아동", "수당", "양육", "육아"],
+  "conditions": [
+    {
+      "question": "신청 방법을 선택해주세요.",
+      "param": "method",
+      "options": [
+        {"label": "온라인 신청 (복지로/정부24)", "value": "online"},
+        {"label": "방문 신청", "value": "offline"},
+        {"label": "신청 자격 확인", "value": "eligibility"}
+      ]
+    }
+  ],
+  "responses": {
+    "online": {
+      "conclusion": "아동수당 온라인 신청 안내입니다.",
+      "documents": [
+        "보호자 공동인증서 또는 간편인증",
+        "아동 정보 (이름, 주민등록번호)"
+      ],
+      "methods": {
+        "online": {
+          "name": "복지로 또는 정부24",
+          "url": "https://www.bokjiro.go.kr"
+        }
+      },
+      "links": [
+        {"title": "복지로 아동수당", "url": "https://www.bokjiro.go.kr"},
+        {"title": "정부24", "url": "https://www.gov.kr"}
+      ],
+      "department": {
+        "name": "아동청소년과",
+        "phone": "02-2241-3974"
+      }
+    },
+    "offline": {
+      "conclusion": "아동수당 방문 신청 안내입니다.",
+      "documents": [
+        "보호자 신분증",
+        "아동 주민등록등본 (관계 확인용)",
+        "통장 사본 (보호자 명의)"
+      ],
+      "methods": {
+        "offline": {
+          "name": "관할 주민센터 방문",
+          "address": "거주지 관할 주민센터"
+        }
+      },
+      "links": [
+        {"title": "성북구 아동청소년과", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "아동청소년과",
+        "phone": "02-2241-3974"
+      }
+    },
+    "eligibility": {
+      "conclusion": "아동수당 신청 자격 안내입니다.",
+      "documents": [],
+      "methods": {},
+      "links": [
+        {"title": "복지로 자격확인", "url": "https://www.bokjiro.go.kr"},
+        {"title": "아동수당 안내", "url": "https://www.ihappy.or.kr"}
+      ],
+      "department": {
+        "name": "아동청소년과",
+        "phone": "02-2241-3974"
+      }
+    }
+  }
+}

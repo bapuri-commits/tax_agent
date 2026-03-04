@@ -1,0 +1,81 @@
+{
+  "id": "parking_violation",
+  "name": "불법주차 신고",
+  "category": "주차/교통",
+  "keywords": ["불법주차", "주차신고", "주차위반", "불법주정차", "이중주차", "주차단속", "소화전주차"],
+  "conditions": [
+    {
+      "question": "신고 방법을 선택해주세요.",
+      "param": "report_method",
+      "options": [
+        {"label": "앱으로 바로 신고 (안전신문고)", "value": "app"},
+        {"label": "전화 신고", "value": "phone"},
+        {"label": "신고 방법 안내만", "value": "info"}
+      ]
+    }
+  ],
+  "responses": {
+    "app": {
+      "conclusion": "안전신문고 앱으로 불법주차를 신고할 수 있습니다.",
+      "documents": [
+        "불법주차 사진 2장 이상 (1분 간격 촬영)",
+        "차량 번호판이 보이도록 촬영"
+      ],
+      "methods": {
+        "online": {
+          "name": "안전신문고 앱",
+          "url": "https://www.safetyreport.go.kr"
+        }
+      },
+      "links": [
+        {"title": "안전신문고", "url": "https://www.safetyreport.go.kr"},
+        {"title": "성북구 주차관리", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "교통지도과",
+        "phone": "02-2241-3737"
+      }
+    },
+    "phone": {
+      "conclusion": "전화로 불법주차를 신고할 수 있습니다.",
+      "documents": [],
+      "methods": {
+        "offline": {
+          "name": "전화 신고",
+          "address": "성북구청 교통지도과 또는 관할 주민센터"
+        }
+      },
+      "links": [
+        {"title": "성북구청 교통지도과", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "교통지도과",
+        "phone": "02-2241-3737"
+      }
+    },
+    "info": {
+      "conclusion": "불법주차 신고 방법 안내입니다.",
+      "documents": [
+        "불법주차 사진 2장 이상 (1분 간격, 번호판 포함)"
+      ],
+      "methods": {
+        "online": {
+          "name": "안전신문고 앱/웹",
+          "url": "https://www.safetyreport.go.kr"
+        },
+        "offline": {
+          "name": "전화 신고",
+          "address": "성북구청 교통지도과 02-2241-3737"
+        }
+      },
+      "links": [
+        {"title": "안전신문고", "url": "https://www.safetyreport.go.kr"},
+        {"title": "성북구 주차관리", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "교통지도과",
+        "phone": "02-2241-3737"
+      }
+    }
+  }
+}

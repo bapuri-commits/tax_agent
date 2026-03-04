@@ -1,0 +1,72 @@
+{
+  "id": "resident_parking",
+  "name": "거주자 우선주차",
+  "category": "주차/교통",
+  "keywords": ["거주자주차", "우선주차", "거주자우선주차", "주차구획", "주차신청", "야간주차", "거주자주차신청"],
+  "conditions": [
+    {
+      "question": "어떤 업무가 필요하신가요?",
+      "param": "purpose",
+      "options": [
+        {"label": "신규 신청", "value": "new"},
+        {"label": "갱신 (연장)", "value": "renew"},
+        {"label": "신청 자격 확인", "value": "eligibility"}
+      ]
+    }
+  ],
+  "responses": {
+    "new": {
+      "conclusion": "거주자 우선주차 신규 신청 안내입니다.",
+      "documents": [
+        "자동차등록증 사본",
+        "주민등록등본",
+        "신분증"
+      ],
+      "methods": {
+        "offline": {
+          "name": "관할 주민센터 방문 신청",
+          "address": "거주지 관할 주민센터"
+        }
+      },
+      "links": [
+        {"title": "성북구 주차관리", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "교통지도과",
+        "phone": "02-2241-3737"
+      }
+    },
+    "renew": {
+      "conclusion": "거주자 우선주차 갱신(연장) 안내입니다.",
+      "documents": [
+        "자동차등록증 사본",
+        "주민등록등본 (주소 변동 시)"
+      ],
+      "methods": {
+        "offline": {
+          "name": "관할 주민센터 방문",
+          "address": "거주지 관할 주민센터"
+        }
+      },
+      "links": [
+        {"title": "성북구 주차관리", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "교통지도과",
+        "phone": "02-2241-3737"
+      }
+    },
+    "eligibility": {
+      "conclusion": "거주자 우선주차 신청 자격 안내입니다.",
+      "documents": [],
+      "methods": {},
+      "links": [
+        {"title": "성북구 주차관리", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "교통지도과",
+        "phone": "02-2241-3737"
+      }
+    }
+  }
+}

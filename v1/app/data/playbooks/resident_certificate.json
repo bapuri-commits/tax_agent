@@ -1,0 +1,77 @@
+{
+  "id": "resident_certificate",
+  "name": "주민등록등·초본 발급",
+  "category": "증명서발급",
+  "keywords": ["등본", "초본", "주민등록등본", "주민등록초본", "등본발급", "초본발급", "등본떼기", "주민등록", "등초본"],
+  "conditions": [
+    {
+      "question": "발급 방법을 선택해주세요.",
+      "param": "method",
+      "options": [
+        {"label": "온라인 발급 (정부24)", "value": "online"},
+        {"label": "무인발급기", "value": "kiosk"},
+        {"label": "주민센터 방문", "value": "offline"}
+      ]
+    }
+  ],
+  "responses": {
+    "online": {
+      "conclusion": "온라인 등·초본 발급 안내입니다.",
+      "documents": [
+        "공동인증서 또는 간편인증"
+      ],
+      "methods": {
+        "online": {
+          "name": "정부24 (무료)",
+          "url": "https://www.gov.kr"
+        }
+      },
+      "links": [
+        {"title": "정부24 등본발급", "url": "https://www.gov.kr"}
+      ],
+      "department": {
+        "name": "주민등록팀",
+        "phone": "02-2241-3535"
+      }
+    },
+    "kiosk": {
+      "conclusion": "무인발급기 이용 안내입니다.",
+      "documents": [
+        "주민등록증 또는 운전면허증 (지문인식 필요)"
+      ],
+      "methods": {
+        "offline": {
+          "name": "무인발급기 (수수료 100원)",
+          "address": "성북구청 1층, 각 주민센터, 지하철역 내 무인발급기"
+        }
+      },
+      "links": [
+        {"title": "무인발급기 위치", "url": "https://www.gov.kr/mw/AA020InfoCapp498702.do"}
+      ],
+      "department": {
+        "name": "주민등록팀",
+        "phone": "02-2241-3535"
+      }
+    },
+    "offline": {
+      "conclusion": "주민센터 방문 발급 안내입니다.",
+      "documents": [
+        "신분증 (주민등록증 또는 운전면허증)",
+        "수수료: 등본 400원 / 초본 400원"
+      ],
+      "methods": {
+        "offline": {
+          "name": "관할 주민센터 방문",
+          "address": "거주지 관할 주민센터 민원실"
+        }
+      },
+      "links": [
+        {"title": "성북구 주민센터", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "주민등록팀",
+        "phone": "02-2241-3535"
+      }
+    }
+  }
+}

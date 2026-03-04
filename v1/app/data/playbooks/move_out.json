@@ -1,0 +1,56 @@
+{
+  "id": "move_out",
+  "name": "전출신고",
+  "category": "주민등록",
+  "keywords": ["전출", "전출신고", "이사나감", "타지역이사", "전출세대", "나가"],
+  "conditions": [
+    {
+      "question": "전출 방법을 선택해주세요.",
+      "param": "method",
+      "options": [
+        {"label": "온라인 (정부24)", "value": "online"},
+        {"label": "방문 접수", "value": "offline"}
+      ]
+    }
+  ],
+  "responses": {
+    "online": {
+      "conclusion": "온라인 전출신고 안내입니다.",
+      "documents": [
+        "공동인증서 또는 간편인증 (본인 확인용)"
+      ],
+      "methods": {
+        "online": {
+          "name": "정부24",
+          "url": "https://www.gov.kr"
+        }
+      },
+      "links": [
+        {"title": "정부24 전출신고", "url": "https://www.gov.kr"}
+      ],
+      "department": {
+        "name": "주민등록팀",
+        "phone": "02-2241-3535"
+      }
+    },
+    "offline": {
+      "conclusion": "방문 전출신고 안내입니다.",
+      "documents": [
+        "신분증 (주민등록증 또는 운전면허증)"
+      ],
+      "methods": {
+        "offline": {
+          "name": "방문 접수",
+          "address": "성북구청 민원실 1층 또는 관할 주민센터"
+        }
+      },
+      "links": [
+        {"title": "성북구청 민원안내", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "주민등록팀",
+        "phone": "02-2241-3535"
+      }
+    }
+  }
+}

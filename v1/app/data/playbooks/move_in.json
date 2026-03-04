@@ -1,0 +1,92 @@
+{
+  "id": "move_in",
+  "name": "전입신고",
+  "category": "주민등록",
+  "keywords": ["전입", "전입신고", "이사", "주소변경", "주소이전", "전입세대", "이사신고"],
+  "conditions": [
+    {
+      "question": "전입신고 대상자를 선택해주세요.",
+      "param": "applicant_type",
+      "options": [
+        {"label": "본인", "value": "self"},
+        {"label": "세대원(가족)", "value": "family"},
+        {"label": "대리인", "value": "proxy"}
+      ]
+    }
+  ],
+  "responses": {
+    "self": {
+      "conclusion": "본인 전입신고 안내입니다.",
+      "documents": [
+        "신분증 (주민등록증 또는 운전면허증)",
+        "전입지 확인 서류 (임대차계약서 등)"
+      ],
+      "methods": {
+        "online": {
+          "name": "정부24",
+          "url": "https://www.gov.kr/mw/EgovPageLink.do?link=confirm/AA040_confirm_id"
+        },
+        "offline": {
+          "name": "방문 접수",
+          "address": "성북구청 민원실 1층 또는 관할 주민센터"
+        }
+      },
+      "links": [
+        {"title": "정부24 전입신고", "url": "https://www.gov.kr"},
+        {"title": "성북구청 민원안내", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "주민등록팀",
+        "phone": "02-2241-3535"
+      }
+    },
+    "family": {
+      "conclusion": "세대원(가족) 전입신고 안내입니다.",
+      "documents": [
+        "신고인(세대주 또는 세대원) 신분증",
+        "전입지 확인 서류 (임대차계약서 등)",
+        "가족관계 확인 서류 (주민등록등본 등, 관계 확인 가능 시 생략)"
+      ],
+      "methods": {
+        "online": {
+          "name": "정부24",
+          "url": "https://www.gov.kr/mw/EgovPageLink.do?link=confirm/AA040_confirm_id"
+        },
+        "offline": {
+          "name": "방문 접수",
+          "address": "성북구청 민원실 1층 또는 관할 주민센터"
+        }
+      },
+      "links": [
+        {"title": "정부24 전입신고", "url": "https://www.gov.kr"},
+        {"title": "성북구청 민원안내", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "주민등록팀",
+        "phone": "02-2241-3535"
+      }
+    },
+    "proxy": {
+      "conclusion": "대리인 전입신고 안내입니다.",
+      "documents": [
+        "대리인 신분증",
+        "위임장 (전입자 서명 또는 날인)",
+        "전입자 신분증 사본",
+        "전입지 확인 서류 (임대차계약서 등)"
+      ],
+      "methods": {
+        "offline": {
+          "name": "방문 접수만 가능",
+          "address": "성북구청 민원실 1층 또는 관할 주민센터"
+        }
+      },
+      "links": [
+        {"title": "성북구청 민원안내", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "주민등록팀",
+        "phone": "02-2241-3535"
+      }
+    }
+  }
+}

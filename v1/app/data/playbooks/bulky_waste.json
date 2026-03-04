@@ -1,0 +1,85 @@
+{
+  "id": "bulky_waste",
+  "name": "대형폐기물 배출",
+  "category": "쓰레기/환경",
+  "keywords": ["대형폐기물", "대형쓰레기", "가구버리기", "소파버리기", "매트리스", "냉장고버리기", "폐가전", "가전제품수거", "이불버리기", "대형생활폐기물", "폐기물스티커", "소파", "냉장고", "이불", "가구", "침대", "책상", "세탁기", "폐기물", "쓰레기", "버리"],
+  "conditions": [
+    {
+      "question": "배출할 폐기물 유형을 선택해주세요.",
+      "param": "waste_type",
+      "options": [
+        {"label": "가구 (소파, 책상, 침대 등)", "value": "furniture"},
+        {"label": "가전제품 (냉장고, 세탁기, TV 등)", "value": "appliance"},
+        {"label": "기타 대형 생활폐기물", "value": "other"}
+      ]
+    }
+  ],
+  "responses": {
+    "furniture": {
+      "conclusion": "가구류 대형폐기물 배출 안내입니다.",
+      "documents": [
+        "대형폐기물 스티커 (인터넷 또는 주민센터 구매)",
+        "스티커 가격은 품목·크기별 상이"
+      ],
+      "methods": {
+        "online": {
+          "name": "성북구 대형폐기물 인터넷 신고",
+          "url": "https://www.sb.go.kr/main/mainPage.do"
+        },
+        "offline": {
+          "name": "주민센터에서 스티커 구매 후 부착·배출",
+          "address": "거주지 관할 주민센터"
+        }
+      },
+      "links": [
+        {"title": "성북구 대형폐기물", "url": "https://www.sb.go.kr/main/mainPage.do"},
+        {"title": "성북구 청소행정과", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "청소행정과",
+        "phone": "02-2241-4451"
+      }
+    },
+    "appliance": {
+      "conclusion": "폐가전 무상 수거 안내입니다.",
+      "documents": [],
+      "methods": {
+        "online": {
+          "name": "폐가전 무상 방문수거 (한국전자제품자원순환공제조합)",
+          "url": "https://www.15990903.or.kr"
+        }
+      },
+      "links": [
+        {"title": "폐가전 무상수거", "url": "https://www.15990903.or.kr"},
+        {"title": "콜센터 1599-0903", "url": "https://www.15990903.or.kr"}
+      ],
+      "department": {
+        "name": "청소행정과",
+        "phone": "02-2241-4451"
+      }
+    },
+    "other": {
+      "conclusion": "기타 대형생활폐기물 배출 안내입니다.",
+      "documents": [
+        "대형폐기물 스티커 (인터넷 또는 주민센터 구매)"
+      ],
+      "methods": {
+        "online": {
+          "name": "성북구 대형폐기물 인터넷 신고",
+          "url": "https://www.sb.go.kr/main/mainPage.do"
+        },
+        "offline": {
+          "name": "주민센터에서 스티커 구매 후 부착·배출",
+          "address": "거주지 관할 주민센터"
+        }
+      },
+      "links": [
+        {"title": "성북구 대형폐기물", "url": "https://www.sb.go.kr/main/mainPage.do"}
+      ],
+      "department": {
+        "name": "청소행정과",
+        "phone": "02-2241-4451"
+      }
+    }
+  }
+}
